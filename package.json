@@ -3,8 +3,14 @@
   "version": "0.0.1",
   "description": "Hooks utility for material-ui",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepare": "tsc",
+    "test": "echo \"Error: no test specified\""
   },
   "repository": {
     "type": "git",
@@ -20,6 +26,7 @@
   },
   "homepage": "https://github.com/maruware/material-ui-hooks#readme",
   "devDependencies": {
+    "@types/react": "^16.9.14",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "eslint": "^6.7.2",
@@ -32,5 +39,8 @@
     "eslint-plugin-standard": "^4.0.1",
     "prettier": "^1.19.1",
     "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "react": "^16.12.0"
   }
 }
