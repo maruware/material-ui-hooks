@@ -1,7 +1,9 @@
 import { useState, useCallback } from 'react'
 
-export const useOpen = (): [boolean, () => void, () => void] => {
-  const [open, setOpen] = useState(false)
+export const useOpen = (
+  initialValue = false
+): [boolean, () => void, () => void] => {
+  const [open, setOpen] = useState(initialValue)
 
   const handleOpen = useCallback(() => {
     setOpen(true)
